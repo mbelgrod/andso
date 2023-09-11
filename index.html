@@ -7,8 +7,18 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <img src="andso.png" alt="" class="center">
+    <div id="container">
+        <!-- <img src="andso.svg" id="images"> -->
+        <img src="andso.svg" alt="" id="logo">
     </div>
+
+    <script>
+        let container = document.querySelector('#container');
+        let logo = document.querySelector('#logo');
+        container.addEventListener('mousemove', (e) => {
+            logo.style.top = e.clientY + "px";
+            logo.style.left = e.clientX + "px";
+        })
+    </script>
 </body>
 </html>
